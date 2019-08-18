@@ -1,0 +1,56 @@
+{
+  "consumer": {
+    "name": "python-data-aggregator"
+  },
+  "provider": {
+    "name": "Account"
+  },
+  "interactions": [
+    {
+      "description": "the correct paper URL should be provided",
+      "providerState": "Provided we have the correct project_id and data to edit",
+      "request": {
+        "method": "get",
+        "path": "/"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": [
+          {
+            "id": 1,
+            "first_name": "Michael",
+            "last_name": "Johnson",
+            "address": "London"
+          }
+        ],
+        "matchingRules": {
+          "$.body": {
+            "min": 1
+          },
+          "$.body[*].*": {
+            "match": "type"
+          },
+          "$.body[*].id": {
+            "match": "type"
+          },
+          "$.body[*].first_name": {
+            "match": "type"
+          },
+          "$.body[*].last_name": {
+            "match": "type"
+          },
+          "$.body[*].address": {
+            "match": "type"
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}

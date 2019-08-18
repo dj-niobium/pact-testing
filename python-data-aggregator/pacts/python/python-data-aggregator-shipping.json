@@ -1,0 +1,52 @@
+{
+  "consumer": {
+    "name": "python-data-aggregator"
+  },
+  "provider": {
+    "name": "Shipping"
+  },
+  "interactions": [
+    {
+      "description": "the correct paper URL should be provided",
+      "providerState": "Provided we have the correct project_id and data to edit",
+      "request": {
+        "method": "get",
+        "path": "/"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": [
+          {
+            "id": 1,
+            "status": "awaiting_shipping",
+            "quantity": 5
+          }
+        ],
+        "matchingRules": {
+          "$.body": {
+            "min": 1
+          },
+          "$.body[*].*": {
+            "match": "type"
+          },
+          "$.body[*].id": {
+            "match": "type"
+          },
+          "$.body[*].status": {
+            "match": "type"
+          },
+          "$.body[*].quantity": {
+            "match": "type"
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}

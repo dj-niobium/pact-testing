@@ -1,0 +1,4 @@
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9292
+DEBUG:urllib3.connectionpool:http://localhost:9292 "PUT /pacts/provider/python-data-aggregator/consumer/api-server/version/111 HTTP/1.1" 201 4010
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9292
+DEBUG:urllib3.connectionpool:http://localhost:9292 "PUT /pacticipants/api-server/versions/111/tags/prod HTTP/1.1" 200 445

@@ -1,0 +1,3 @@
+FROM erikap/ruby-sinatra
+COPY web.rb /usr/src/app
+COPY response_files/shipping.json /usr/src/app/db_response.json

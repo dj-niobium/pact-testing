@@ -1,0 +1,81 @@
+I, [2019-08-17T21:38:34.517289 #89561]  INFO -- : Cleared interactions
+I, [2019-08-17T21:38:34.525403 #89561]  INFO -- : Registered expected interaction GET /buy/1/1/15
+D, [2019-08-17T21:38:34.525664 #89561] DEBUG -- : {
+  "description": "the correct paper URL should be provided",
+  "providerState": "Provided we have the correct project_id and data to edit",
+  "request": {
+    "method": "get",
+    "path": "/buy/1/1/15"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "status": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "Transaction successful"
+      },
+      "transaction": {
+        "json_class": "Pact::SomethingLike",
+        "contents": {
+          "account_name": {
+            "json_class": "Pact::SomethingLike",
+            "contents": "John Smith"
+          },
+          "product_name": {
+            "json_class": "Pact::SomethingLike",
+            "contents": "Socks"
+          },
+          "quantity": {
+            "json_class": "Pact::SomethingLike",
+            "contents": 5
+          }
+        }
+      }
+    }
+  }
+}
+I, [2019-08-17T21:38:34.545278 #89561]  INFO -- : Received request GET /buy/1/1/15
+D, [2019-08-17T21:38:34.545404 #89561] DEBUG -- : {
+  "path": "/buy/1/1/15",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:1111",
+    "User-Agent": "python-requests/2.22.0",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2019-08-17T21:38:34.545581 #89561]  INFO -- : Found matching response for GET /buy/1/1/15
+D, [2019-08-17T21:38:34.545684 #89561] DEBUG -- : {
+  "status": 200,
+  "headers": {
+  },
+  "body": {
+    "status": {
+      "json_class": "Pact::SomethingLike",
+      "contents": "Transaction successful"
+    },
+    "transaction": {
+      "json_class": "Pact::SomethingLike",
+      "contents": {
+        "account_name": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "John Smith"
+        },
+        "product_name": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "Socks"
+        },
+        "quantity": {
+          "json_class": "Pact::SomethingLike",
+          "contents": 5
+        }
+      }
+    }
+  }
+}

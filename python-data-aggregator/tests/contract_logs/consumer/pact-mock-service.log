@@ -1,0 +1,140 @@
+I, [2019-08-16T16:07:58.912424 #85650]  INFO -- : Cleared interactions
+I, [2019-08-16T16:07:58.920546 #85650]  INFO -- : Registered expected interaction GET /
+D, [2019-08-16T16:07:58.920814 #85650] DEBUG -- : {
+  "description": "the correct paper URL should be provided",
+  "providerState": "Provided we have the correct project_id and data to edit",
+  "request": {
+    "method": "get",
+    "path": "/"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "json_class": "Pact::ArrayLike",
+      "contents": {
+        "id": {
+          "json_class": "Pact::SomethingLike",
+          "contents": 1
+        },
+        "first_name": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "Michael"
+        },
+        "last_name": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "Johnson"
+        },
+        "address": I, [2019-08-1I, [2019-08-16T16:07:58.962655 #85639]  INFO -- : Received request GET /
+D, [2019-08-16T16:07:58.962749 #85639] DI, [2019-08-16T16:07:58.980330 #85650]  INFO -- : Received request GET /
+D, [2019-08-16T16:07:58.980427 #85650] DEBUG -- : {
+  "path": "/",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:3333",
+    "User-Agent": "python-requests/2.22.0",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2019-08-16T16:07:58.980603 #85650]  INFO -- : Found matching response for GET /
+D, [2019-08-16T16:07:58.980695 #85650] DEBUG -- : {
+  "status": 200,
+  "headers": {
+  },
+  "body": {
+    "json_class": "Pact::ArrayLike",
+    "contents": {
+      "id": {
+        "json_class": "Pact::SomethingLike",
+        "contents": 1
+      },
+      "first_name": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "Michael"
+      },
+      "last_name": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "Johnson"
+      },
+      "address": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "London"
+      }
+    },
+    "min": 1
+  }
+}
+I, [2019-08-16T16:07:58.989749 #85650]  INFO -- : Received request GET /
+D, [2019-08-16T16:07:58.989847 #85650] DEBUG -- : {
+  "path": "/",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:3333",
+    "User-Agent": "python-requests/2.22.0",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2019-08-16T16:07:58.989978 #85650]  INFO -- : Found matching response for GET /
+D, [2019-08-16T16:07:58.990100 #85650] DEBUG -- : {
+  "status": 200,
+  "headers": {
+  },
+  "body": {
+    "json_class": "Pact::ArrayLike",
+    "contents": {
+      "id": {
+        "json_class": "Pact::SomethingLike",
+        "contents": 1
+      },
+      "first_name": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "Michael"
+      },
+      "last_name": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "Johnson"
+      },
+      "address": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "London"
+      }
+    },
+    "min": 1
+  }
+}
+ersion": "HTTP/1.1"
+  }
+}
+I, [2019-08-16T16:07:58.953997 #85628]  INFO -- : Found matching response for GET /
+D, [2019-08-16T16:07:58.954103 #85628] DEBUG -- : {
+  "status": 200,
+  "headers": {
+  },
+  "body": {
+    "json_class": "Pact::ArrayLike",
+    "contents": {
+      "id": {
+        "json_class": "Pact::SomethingLike",
+        "contents": 1
+      },
+      "name": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "Pants"
+      },
+      "quantity": {
+        "json_class": "Pact::SomethingLike",
+        "contents": 15
+      }
+    },
+    "min": 1
+  }
+}

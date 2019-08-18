@@ -1,0 +1,53 @@
+{
+  "consumer": {
+    "name": "api-server"
+  },
+  "provider": {
+    "name": "python-data-aggregator"
+  },
+  "interactions": [
+    {
+      "description": "the correct paper URL should be provided",
+      "providerState": "Provided we have the correct project_id and data to edit",
+      "request": {
+        "method": "get",
+        "path": "/buy/1/1/15"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": {
+          "status": "Transaction successful",
+          "transaction": {
+            "account_name": "John Smith",
+            "product_name": "Socks",
+            "quantity": 5
+          }
+        },
+        "matchingRules": {
+          "$.body.status": {
+            "match": "type"
+          },
+          "$.body.transaction": {
+            "match": "type"
+          },
+          "$.body.transaction.account_name": {
+            "match": "type"
+          },
+          "$.body.transaction.product_name": {
+            "match": "type"
+          },
+          "$.body.transaction.quantity": {
+            "match": "type"
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}

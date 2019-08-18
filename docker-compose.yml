@@ -1,0 +1,60 @@
+version: "3.7"
+services:
+  account:
+    build:
+      context: services
+      dockerfile: Dockerfile.account
+    ports:
+      - target: 80
+        published: 771
+  inventory:
+    build:
+      context: services
+      dockerfile: Dockerfile.inventory
+    ports:
+      - target: 80
+        published: 772
+  shipping:
+    build:
+      context: services
+      dockerfile: Dockerfile.shipping
+    ports:
+      - target: 80
+        published: 773
+  data-aggregator:
+    build:
+      context: python-data-aggregator
+      dockerfile: Dockerfile
+    ports:
+      - target: 80
+        published: 770
+  api-server:
+    build:
+      context: api-server
+      dockerfile: Dockerfile
+    ports:
+      - target: 80
+        published: 777
+
+  postgres:
+    image: postgres
+    healthcheck:
+      test: psql postgres --command "select 1" -U postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: postgres
+  pact_broker:
+    image: pactfoundation/pact-broker
+    ports:
+      - "9292:9292"
+    depends_on:
+      - postgres
+    environment:
+      PACT_BROKER_DATABASE_USERNAME: postgres
+      PACT_BROKER_DATABASE_PASSWORD: password
+      PACT_BROKER_DATABASE_HOST: postgres
+      PACT_BROKER_DATABASE_NAME: postgres
+      PACT_BROKER_PORT: "9292"
